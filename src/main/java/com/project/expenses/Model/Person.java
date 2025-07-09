@@ -11,6 +11,8 @@ public class Person {
     private String name;
     private String phone;
     private String relation;
+    private Double credit;
+    private Double debit;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
@@ -30,4 +32,18 @@ public class Person {
 
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }
+	public Double getCredit() {
+		return credit;
+	}
+	public void setCredit(Double credit) {
+		this.credit = credit;
+	}
+	public Double getDebit() {
+		return debit;
+	}
+	public void setDebit(Double debit) {
+		this.debit = debit;
+	}
+    
+    
 }
